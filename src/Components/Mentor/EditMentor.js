@@ -42,7 +42,7 @@ const EditMentorForm = ({ data }) => {
       },
       validationSchema: DataValidationSchema,
       onSubmit: (updateValues) => {
-        console.log("value",updateValues)
+        console.log("value", updateValues);
         EditData(updateValues);
       },
     });
@@ -56,6 +56,7 @@ const EditMentorForm = ({ data }) => {
 
   return (
     <section className="container my-5">
+      <h2 className="text-center mt-3">Edit Mentor Details</h2>
       <Form onSubmit={handleSubmit} className="add-student">
         <TextField
           label="Mentor-Id"
@@ -116,6 +117,9 @@ const EditMentorForm = ({ data }) => {
           Update Mentor Details
         </Button>
       </Form>
+      <button className="btn btn-primary mt-3" onClick={() => navigate(-1)}>
+        Back
+      </button>
     </section>
   );
 };
