@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import Login from "./Components/Login";
+import "./App.css";
+import Home from "./Components/Home";
+import NotFound from "./Components/NotFound";
+import Student from "./Components/Student/Student";
+import AddStudent from "./Components/Student/AddStudent";
+import { EditStudent } from "./Components/Student/EditStudent";
+import Mentor from "./Components/Mentor/Mentor";
+import AddMentor from "./Components/Mentor/AddMentor";
+import { EditMentor } from "./Components/Mentor/EditMentor";
+
+// https://63899fddc5356b25a203ee0c.mockapi.io/student
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/student" element={<Student />} />
+        <Route path="/addstudent" element={<AddStudent />} />
+        <Route path="student/editstudent/:id" element={<EditStudent />} />
+        <Route path="/mentor" element={<Mentor />} />
+        <Route path="/addmentor" element={<AddMentor />} />
+        <Route path="mentor/editmentor/:id" element={<EditMentor/>} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   );
 }

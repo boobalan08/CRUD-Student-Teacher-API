@@ -1,0 +1,31 @@
+.progress-card{
+    display: grid;
+    grid-template-columns: 1fr ;
+    gap: 16px;
+}
+@media only screen and (min-width:662px) {
+    .progress-card{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+@media only screen and (min-width:663px) {
+    .progress-card{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media only screen and (min-width:1100px) {
+    .progress-card{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+.ptag{
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px 0px 5px;
+}
+.cardss{
+    box-shadow: 3px 3px 10px rgba(141, 138, 138, 0.4);
+}
